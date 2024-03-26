@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Untitled Document</title>
+</head>
+
+<body>
+    <label for="soz1">Söz daxil edin</label>
+    <input id="bir" type="text" name="soz">
+    <button onclick="myFunction1()">Uzunluq</button>
+    <input id="g" type="text">
+
+    <br><br>
+    <label for="soz2">Söz daxil edin</label>
+    <input id="iki" type="text" name="soz2">
+    <label for="herf1">simvol daxil edin</label>
+    <input id="uc" type="text" name="herf1">
+    <label class="sual">Sözdə verilən simvol varmı? </label>
+    <button onclick="myFunction()">Yoxla</button>
+    <input id="h" type="text">
+
+    <br><br>
+    <label for="soz3">Söz daxil edin</label>
+    <input id="dord" type="text" name="soz3">
+    <label for="herf2">simvol daxil edin</label>
+    <input id="bes" type="text" name="herf2">
+    <label class="sual">Söz verilən simvolla başlayır?</label>
+    <button onclick="myFunction2()">Yoxla</button>
+    <input id="i" type="text">
+
+    <br><br>
+    <label for="soz4">Söz daxil edin</label>
+    <input id="alti" type="text" name="soz4">
+    <label for="herf3">simvol daxil edin</label>
+    <input id="yeddi" type="text" name="herf3">
+    <label class="sual">Söz verilən simvolla bitir?</label>
+    <button onclick="myFunction3()">Yoxla</button>
+    <input id="j" type="text">
+
+
+    <br><br>
+    <label for="soz5">Söz daxil edin</label>
+    <input id="sekkiz" type="text" name="soz5">
+    <label for="herf4">simvol daxil edin</label>
+    <input id="doqquz" type="text" name="herf4">
+    <label class="sual">Sözdə verilən simvolun indexi</label>
+    <button onclick="myFunction4()">Yoxla</button>
+    <input id="k" type="text">
+
+
+    <script>
+
+
+        let soz1 = document.getElementById("bir")
+        function myFunction1() {
+            document.getElementById("g").value = soz1.value.length;
+        }
+
+
+        let soz2 = document.getElementById("iki")
+        let herf1 = document.getElementById("uc")
+        function myFunction() {
+            document.getElementById("h").value = soz2.value.match(herf1.value);
+        }
+
+        let soz3 = document.getElementById("dord")
+        let herf2 = document.getElementById("bes")
+        function myFunction2() {
+            document.getElementById("i").value = soz3.value.startsWith(herf2.value);
+        }
+
+        let soz4 = document.getElementById("alti")
+        let herf3 = document.getElementById("yeddi")
+        function myFunction3() {
+            document.getElementById("j").value = soz4.value.endsWith(herf3.value);
+        }
+
+
+        let soz5 = document.getElementById("sekkiz")
+        let herf4 = document.getElementById("doqquz")
+        function myFunction4() {
+            document.getElementById("k").value = soz5.value.indexOf(herf4.value);
+        }
+
+    </script>
+</body>
+
+</html>
